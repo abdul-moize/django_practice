@@ -1,0 +1,23 @@
+<style>
+.center {
+  margin: auto;
+  width: 60%;
+  border: 3px solid #73AD21;
+  padding: 10px;
+  display: flex;
+  direction: column;
+}
+
+</style>
+<form action="{% url 'polls:add_user' %}" method="post" xmlns="http://www.w3.org/1999/html">
+{% csrf_token %}
+    <div>
+        <div class="center" >
+            Email:<input type="text" placeholder="Enter Email Address"><br>
+            Password:<input type="password" placeholder="Enter Password">
+            Confirm Password:
+            <br><input type="submit" value="Submit">
+        </div>
+    </div>
+
+</form>
